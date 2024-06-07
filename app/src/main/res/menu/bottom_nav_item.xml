@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mvcFragment"
+        android:title="@string/MVC"
+        android:icon="@drawable/mvc"
+        />
+
+    <item
+        android:id="@+id/mvpFragment"
+        android:title="@string/MVP"
+        android:icon="@drawable/mvp"
+        />
+
+    <item
+        android:id="@+id/mvvmFragment"
+        android:title="@string/MVVM"
+        android:icon="@drawable/mvvm"
+        />
+
+
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mvcFragment">
+
+
+    <!--스플래시 프래그먼트-->
+    <fragment
+        android:id="@+id/mvcFragment"
+        android:name="abled.semina.designPattern.mvc.MvcFragment"
+        android:label="fragment_mvc"
+        tools:layout="@layout/fragment_mvc">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mvpFragment"
+        android:name="abled.semina.designPattern.mvp.MvpFragment"
+        android:label="fragment_mvp"
+        tools:layout="@layout/fragment_mvp">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mvvmFragment"
+        android:name="abled.semina.designPattern.mvvm.MvvmFragment"
+        android:label="fragment_mvvm"
+        tools:layout="@layout/fragment_mvvm">
+
+    </fragment>
+
+
+
+</navigation>
