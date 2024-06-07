@@ -4,4 +4,6 @@
     <string name="MVC">MVC</string>
     <string name="MVP">MVP</string>
     <string name="MVVM">MVVM</string>
+    <string name="MVVMBinding">MVVM과 바인딩</string>
+    <string name="another">다른 사진 보기</string>
 </resources>

@@ -1,5 +1,6 @@
-package abled.semina.designPattern.mvvm
+package abled.semina.designPattern.mvvm2
 
+import abled.semina.designPattern.mvvm.Model
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.LiveData
@@ -8,19 +9,18 @@ import androidx.lifecycle.ViewModel
 
 class ViewModel: ViewModel(){
 
-    private val TAG = "mvvm 뷰모델"
+    private val TAG = "mvvm & binding 뷰모델"
 
-    private val model = Model()
+    private var model = Model()
 
     private val _randomCatUrl = MutableLiveData<String>()
     val randomCatUrl: LiveData<String>
         get() = _randomCatUrl
 
-    fun setOnButtonClick(){
 
+    fun setOnButtonClick(){
         Log.d(TAG, "viewModel : model에게 url 요청")
         _randomCatUrl.value = model.getCatUrl()
-
     }
 
 }
