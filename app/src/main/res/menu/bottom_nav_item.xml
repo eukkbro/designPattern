@@ -19,11 +19,5 @@
         android:icon="@drawable/mvvm"
         />
 
-    <item
-        android:id="@+id/mvvmBindingFragment"
-        android:title="@string/MVVMBinding"
-        android:icon="@drawable/mvvm_binding"
-        />
-
 
 </menu>

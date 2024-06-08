@@ -6,4 +6,6 @@
     <string name="MVVM">MVVM</string>
     <string name="MVVMBinding">MVVM과 바인딩</string>
     <string name="another">다른 사진 보기</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

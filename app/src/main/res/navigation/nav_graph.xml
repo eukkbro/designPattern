@@ -32,14 +32,5 @@
 
     </fragment>
 
-    <fragment
-        android:id="@+id/mvvmBindingFragment"
-        android:name="abled.semina.designPattern.mvvm2.MvvmBindingFragment"
-        android:label="fragment_mvvm_binding"
-        tools:layout="@layout/fragment_mvvm_and_binding">
-
-    </fragment>
-
-
 
 </navigation>

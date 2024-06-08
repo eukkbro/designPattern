@@ -7,7 +7,7 @@ class Model {
     private val TAG = "mvc 모델"
     private var randomCatUrl = "https://cataas.com/cat?type=square"
     fun getCatUrl(): String{
-        Log.d(TAG, "모델 : ${randomCatUrl}을 반환")
+        Log.d(TAG, "Model 에서 데이터 응답")
         return randomCatUrl
     }
 
