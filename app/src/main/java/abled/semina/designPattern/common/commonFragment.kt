@@ -24,7 +24,7 @@ class commonFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        // 데이터바인딩
+       /**데이터 바인딩**/
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvc, container, false)
 
         return binding.root
@@ -34,29 +34,30 @@ class commonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 리스너 세팅
+        /**리스너 설정**/
         setListener()
     }
 
     private fun setListener(){
-        //버튼 클릭 리스너
+
+        /**버튼 클릭 리스너**/
         binding.button.setOnClickListener{
             Log.d(TAG, "View & Controller : 다른 사진 보기 버튼 클릭")
-            //이미지 뷰 처리
-            setImageView()
+
+            /**이미지뷰 설정 메서드**/
+            setImageView(randomCatUrl)
         }
     }
 
-    private fun setImageView(){
+    private fun setImageView(url: String){
 
+        /**글라이드**/
         Glide.with(this)
-            .load(randomCatUrl) //what
+            .load(url) //what
             .placeholder(R.drawable.loading) // 로딩하는 동안 불러올 이미지
             .skipMemoryCache(true) // 캐시 제거
             .diskCacheStrategy(DiskCacheStrategy.NONE) // 캐시 제거
             .into(binding.imageView) // where
-
-        Log.d(TAG, "view & controller 모델에서 받아온 고양이사진url을 glide로 이미지 뷰에 띄우기")
 
     }
 }

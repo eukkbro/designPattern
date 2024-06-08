@@ -44,6 +44,7 @@ class MvcFragment : Fragment() {
            var url = model.getCatUrl()
 
            Log.d(TAG, "Model 에서 받은 데이터로 View 업데이트를 요청한다.")
+
            /**글라이드를 통해 이미지뷰에 이미지 띄우는 메서드**/
            setImageView(url)
 

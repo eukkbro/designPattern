@@ -22,26 +22,32 @@ class MvpFragment : Fragment(), Presenter.View{
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
 
-        // Inflate the layout for this fragment
+        /**데이터 바인딩**/
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvp, container, false)
 
+        /**초기화**/
         setInitialize()
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /**리스너 설정**/
         setListener()
     }
 
 
     private fun setInitialize(){
 
+        /**프레젠터 불러오기**/
         presenterImpl = PresenterImpl(this)
 
     }
     private fun setListener(){
+
+        /**버튼 클릭 리스너**/
         binding.button.setOnClickListener {
             Log.d(TAG, "View에서 받은 사용자의 입력을 받는다.")
             Log.d(TAG, "View에서 Presenter에게 데이터를 요청")
@@ -51,6 +57,7 @@ class MvpFragment : Fragment(), Presenter.View{
 
     override fun setImageView(url: String) {
 
+        /**글라이드**/
         Glide.with(this)
             .load(url)
             .placeholder(R.drawable.loading)

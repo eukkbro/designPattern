@@ -22,9 +22,10 @@ class MvvmFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        // Inflate the layout for this fragment
+        /**데이터 바인딩**/
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm, container, false)
 
+        /**초기화 설정**/
         setInitialize()
 
         return binding.root
@@ -33,13 +34,16 @@ class MvvmFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /**옵저버 셋팅**/
         setObserve()
     }
 
 
     private fun setInitialize(){
 
+        /**라이프사이클오너를 프래그먼트로 설정**/
         binding.lifecycleOwner = this
+        /**xml에 사용할 뷰모델 설정**/
         binding.viewModel = viewModel
 
     }
