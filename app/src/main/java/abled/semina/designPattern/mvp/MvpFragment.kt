@@ -18,7 +18,6 @@ class MvpFragment : Fragment(), Presenter.View{
 
     private val TAG = "mvp 프래그먼트"
     private lateinit var binding: FragmentMvpBinding
-    private var model: Model = Model()
     private lateinit var presenterImpl: PresenterImpl
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
